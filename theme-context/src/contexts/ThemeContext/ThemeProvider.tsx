@@ -1,7 +1,9 @@
 import { PropsWithChildren, useState } from "react";
 import ThemeContext from "./ThemeContext";
 
-const ThemeProvider = ({children}: PropsWithChildren) => {
+export interface ThemeProviderProps extends PropsWithChildren { }
+
+const ThemeProvider = ({children}: ThemeProviderProps) => {
   const [theme, setTheme] = useState<"light" | "dark">("light")
 
   const changeTheme = (theme: "light" | "dark") => {

@@ -24,7 +24,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -54,15 +53,24 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.theme-container {
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+.theme-container.light{
+  color: #213547;
+  background-color: #ffffff;
+}
+
+.theme-container.light a:hover {
+  color: #747bff;
+}
+
+.theme-container.light button {
+  background-color: #f9f9f9;
+  color: #213547;
 }
